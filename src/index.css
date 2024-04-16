@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  user-select: none;
+}
+
+@layer utilities {
+  .header {
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+  }
+}
+
+.boton {
+  border: #fff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+.boton:hover{
+  animation-duration: 1.5s;
+  transform: scale(90%);
+}
+
+.name{
+  font-family: 'Alex Brush', cursive;
+  font-size: 140px;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 1;
+  text-shadow: 3px 2px 20px #000000;
+  color: #ffffff;
+}
+
+.name3{
+  font-size: 180px;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 800;
+  font-style: bold;
+  z-index: 0;
+  color: #2FABD8;
+  text-shadow: 3px 2px 12px #0474a0;
+  top:25%;
+}
+
+.name4{
+  padding:2rem;
+  font-size: 30px;
+  font-style: normal;
+  z-index: 1;
+}
+
+.link{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  text-shadow: 3px 2px 12px #45bceb;
+}
+
+.logo {
+  font-family: 'Alex Brush', cursive;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 1;
+  text-shadow: 3px 2px 12px #ffffff;
+  color: #0a1647;
+  text-shadow: 3px 2px 12px #45bceb;
+}
+.logo:hover{
+  color: #ffffff;
+}
+a:hover {
+  color: #ffffff; /* Color del enlace cuando el mouse está sobre él */
+}
+
+.countdown-container {
+  display: flex; /* Utiliza flexbox para alinear las secciones */
+  justify-content: center; /* Centra las secciones horizontalmente */
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.countdown-section {
+  display: inline-block; 
+}
+
+.countdown-section span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  padding:5px;
+  
+}
+
+.bg-hero-pattern{
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.corona{
+  top:0%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
