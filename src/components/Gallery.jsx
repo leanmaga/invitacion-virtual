@@ -15,33 +15,68 @@ const Gallery = () => {
         smooth: true
       }
     });
-
+  
     const images = document.querySelectorAll('.image');
-
+  
     images.forEach(image => {
+      // Evento para el puntero del mouse
+      image.addEventListener('mouseover', () => {
+        images.forEach(otherImage => {
+          if (otherImage !== image) {
+            otherImage.classList.add('-dimmed');
+          }
+        });
+        image.classList.add('-bright');
+      });
+  
+      image.addEventListener('mouseout', () => {
+        images.forEach(otherImage => {
+          otherImage.classList.remove('-dimmed');
+        });
+        image.classList.remove('-bright');
+      });
+  
+      // Evento para dispositivos móviles
+      image.addEventListener('touchstart', () => {
+        images.forEach(otherImage => {
+          if (otherImage !== image) {
+            otherImage.classList.add('-dimmed');
+          }
+        });
+        image.classList.add('-bright');
+      });
+  
+      image.addEventListener('touchend', () => {
+        images.forEach(otherImage => {
+          otherImage.classList.remove('-dimmed');
+        });
+        image.classList.remove('-bright');
+      });
+  
+      // Evento de clic para mostrar imagen activa
       image.addEventListener('click', () => {
         image.classList.add('-clicked');
         hideImages();
       });
     });
-
+  
     function showImages() {
       images.forEach(image => {
         image.classList.remove('-clicked');
         image.classList.add('-active');
       });
     }
-
+  
     function hideImages() {
       images.forEach(image => {
         image.classList.remove('-active');
       });
-
+  
       setTimeout(showImages, 2000);
     }
-
+  
     setTimeout(showImages, 1000);
-
+  
     return () => {
       scroll.destroy();
       images.forEach(image => {
@@ -49,6 +84,7 @@ const Gallery = () => {
       });
     };
   }, []);
+  
 
   return (
     <div className='w-screen h-screen bg-black overflow-x-scroll pt-[10%]'>

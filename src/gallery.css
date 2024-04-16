@@ -160,3 +160,12 @@
     width: 40vh;
     background: #999;
 }
+.scroll-animations-example > .scrollsection > .item.-normal.-active,
+.scroll-animations-example > .scrollsection > .item.-small.-active {
+    z-index: 3; /* Asegura que el elemento esté arriba de todo */
+}
+
+.scroll-animations-example > .scrollsection > .item.-normal.-active:hover,
+.scroll-animations-example > .scrollsection > .item.-small.-active:hover {
+    z-index: 4; /* Asegura que el elemento esté arriba de todo */
+}
