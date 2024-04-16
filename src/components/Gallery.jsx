@@ -1,4 +1,4 @@
-import  { useEffect } from 'react';
+import { useEffect } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 
 const Gallery = () => {
@@ -49,13 +49,15 @@ const Gallery = () => {
       });
     };
   }, []);
+
   return (
-    <div className='w-full h-screen bg-hero-children'>
+    <div className='w-screen h-screen bg-black overflow-x-scroll pt-[10%]'>
       <div className='scroll-animations-example' data-scroll-container>
-        <div className='scrollsection' data-scroll-section>
+        <div className='scrollsection ' data-scroll-section>
           <div className='item -normal' data-scroll data-scroll-speed="2">
-              <img className='image' src='https://picsum.photos/id/1005/300/400'/>
+            <img className='image' src='https://picsum.photos/id/1005/300/400' />
           </div>
+    
           <div className='item -big' data-scroll data-scroll-speed="1">
               <img className='image' src='https://picsum.photos/id/1019/600/800'/>
           </div>
