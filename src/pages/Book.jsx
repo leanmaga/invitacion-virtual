@@ -1,9 +1,9 @@
-import Gallery from "../components/Gallery"
+import GalleryTwo from "../components/GalleryTwo"
 
 const Book = () => {
   return (
     <div className="W-full h-screen">
-        <Gallery/>
+        <GalleryTwo/>
     </div>
   )
 }
