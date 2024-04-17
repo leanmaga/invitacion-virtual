@@ -11,11 +11,18 @@ const navigation = [
 ]
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  }
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      
       <nav className="flex items-center justify-between p-6 lg:px-8 text-white">
         <div className="flex lg:flex-1 items-center">
           <NavLink to='/' className="-m-1.5 p-1.5">
@@ -41,7 +48,7 @@ const Navbar = () => {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={toggleMobileMenu}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -49,8 +56,7 @@ const Navbar = () => {
         </div>
       </nav>
       
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-50" />
+      <Dialog as="div" className="lg:hidden" open={isMobileMenuOpen} onClose={closeMobileMenu}>
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full h-screen overflow-y-auto bg-[#111] text-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <NavLink to='/' className="-m-1.5 p-1.5">
@@ -60,7 +66,7 @@ const Navbar = () => {
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={closeMobileMenu}
             >
               <span className="sr-only">Close menu</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -76,6 +82,7 @@ const Navbar = () => {
                     exact
                     className="text-lg font-semibold leading-6 link relative text-center p-4 w-full"
                     activeClassName="text-blue-400"
+                    onClick={closeMobileMenu}
                   >
                     {item.name}
                     <div className="absolute inset-x-0 bottom-0 h-[1px] bg-slate-200" />

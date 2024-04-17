@@ -43,8 +43,8 @@ const Home = () => {
         {/*contador*/}
 
         <div className="cuenta__regresiva w-full">
-          <h3 className="libre-baskerville-regular-italic link">Faltan:</h3>
-          <h1 className="link w-full p-4"><Countdown/></h1>
+          <h3 className="libre-baskerville-regular-italic ">Faltan:</h3>
+          <h1 className=" w-full p-4"><Countdown/></h1>
         </div>
 
       </motion.div> 
