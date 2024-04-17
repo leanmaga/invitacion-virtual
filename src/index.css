@@ -58,20 +58,24 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   text-shadow: 3px 2px 12px #45bceb;
+  color: #ffffff;
 }
-
+.link:hover{
+  color: #0a1647;
+  
+}
 .logo {
   font-family: 'Alex Brush', cursive;
   font-size: 30px;
   font-weight: 400;
   font-style: normal;
   z-index: 1;
-  text-shadow: 3px 2px 12px #ffffff;
-  color: #0a1647;
-  text-shadow: 3px 2px 12px #45bceb;
+  color: #ffffff;
+  text-shadow: 3px 2px 12px #000000;
 }
 .logo:hover{
-  color: #ffffff;
+  color: #0a1647;
+  
 }
 a:hover {
   color: #ffffff; /* Color del enlace cuando el mouse está sobre él */

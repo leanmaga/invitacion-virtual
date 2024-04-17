@@ -37,6 +37,7 @@
   #drag-container img, #drag-container video {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+    cursor: pointer;
     position: absolute;
     left: 0;
     top: 0;
@@ -51,6 +52,7 @@
   }
   
   #drag-container img:hover, #drag-container video:hover {
+    
     -webkit-box-shadow: 0 0 15px #fffd;
             box-shadow: 0 0 15px #fffd;
     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
@@ -120,3 +122,66 @@
               transform: rotateY(0deg);
     }
   }
+
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+  
+.expanded-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* Ajusta el z-index según sea necesario */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.expanded-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* Ajusta el z-index según sea necesario */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-video {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.more{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
