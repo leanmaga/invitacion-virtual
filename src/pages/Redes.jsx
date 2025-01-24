@@ -17,7 +17,7 @@ const Redes = () => {
 
         
         <h1 className="text-5xl font-bold m-2 p-4 " translate="no">
-          #15more2024
+          #15nombre2024
         </h1>
         
         <p className="text-black pb-4 m-2">¡Preparate para mi gran día! Ya podés etiquetarme en Instagram con el hashtag en tus fotos o videos.</p>
